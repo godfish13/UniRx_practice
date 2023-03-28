@@ -18,7 +18,10 @@ namespace UniRxPracitce
             btn.onClick.AsObservable().Subscribe(input =>
             {
                 txt.text = "Clicked";
-            });   
+            });
+
+            //btn.OnClickAsObservable().SubscribeToText(txt, input => "Clicked");       // unirx에는 이처럼 uGUI용 Observe와 Subscribe가 준비되어 있음
+                                                        //단, 현재 스크립트에서는 txt를 TextMeshProUGUI로 설정해두었으므로 사용불가, legacy의 text사용 시 가능
         }
     }
 }
