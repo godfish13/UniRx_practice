@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using UniRx.Triggers;
+using Unity.VisualScripting;
 
-public class RotateObjectbyMouseUpDown : MonoBehaviour
+namespace UniRxPracitce
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RotateObjectbyMouseUpDown : MonoBehaviour
     {
+        [SerializeField] GameObject Cube;
         
+        void Start()
+        {
+            
+        }
     }
-
 }
