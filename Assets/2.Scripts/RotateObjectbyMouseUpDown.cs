@@ -13,7 +13,7 @@ namespace UniRxPracitce
         
         void Start()
         {
-            
+
         }
     }
 }
