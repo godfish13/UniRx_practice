@@ -7,7 +7,7 @@
 .AsObservable().Subscribe(streaminput => { 실행문 });  <- 스트림을 구독, 최종적으로 무엇을 할 것인가 작성
 
 +) .Subscribe(n => 실행문) : onNext(n) 전달
-   .Subscribe(ex => 실행문) : onError() 전달  (Exception ex) 
+   .Subscribe(ex => 실행문) : onError() 전달  (Exception ex)
    .Subscribe(() => 실행문) : onCompleted() 전달  (매개변수 없을 시)
 
 
