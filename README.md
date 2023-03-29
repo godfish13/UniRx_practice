@@ -2,15 +2,21 @@
  
  !!! start 혹은 awake에서 subscribe해야 하나의 스트림만 생성한다. if) update내에서 subscribe시, 프레임마다 스트림을 생성해버림
  
-~~.AsObservable()  <-이벤트를 스트림으로 변경
+.AsObservable()  <-이벤트를 스트림으로 변경(GUI의 button등이 Onclick()이벤트를 보내는 등 이벤트에 바로 연결 가능)
 
-.AsObservable().Subscribe(streaminput => { 실행문 });  <- 스트림을 구독, 최종적으로 무엇을 할 것인가 작성
+.UpdateAsObservable()  <-지정한 오브젝트에 연동된 스트림 생성(오브젝트가 destroy될 때 OnCompleted 실행)
+
+Observable.EveryUpdate()  <- gameObject로부터 독립된 Observable이 만들어짐, MonoBehaviour에 관계 없는 곳에서도 사용 가능 !!!주의사항 오브젝트 destroy 시 OnCompleted 실행 안됨!
+
+ObserveEveryValueChanged()  <- Observable.EveryUpdate의 파생 버전, 값의 변화를 매프레임 감시하는 Observable 생성
+
+.AsObservable().Subscribe(_ => { 실행문 });  <- 스트림을 구독, 최종적으로 무엇을 할 것인가 작성
 
 .Subscribe(n => 실행문) : onNext(n) 구독
 .Subscribe(ex => 실행문) : onError() 구독 (Excoption ex)
 .Subscribe(() => 실행문) : onCompleted()  (매개변수 없음)
 
-+) .OnClickAsObservable().SubscribeToText(text, input => "Clicked");   <-  unirx에는 이처럼 uGUI용 Observe와 Subscribe가 준비되어 있음
++) .OnClickAsObservable().SubscribeToText(text, input => "text");   <-  unirx에는 이처럼 uGUI용 Observe와 Subscribe가 준비되어 있음
                                                                         (단, text가 legacy text형식임 TextMeshPro 사용 불가)
 
 .AsObservable().Buffer(n).Subscribe(streaminput => { 실행문 });  <- 메세지가 n횟수만큼 모이면 실행
