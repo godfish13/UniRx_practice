@@ -7,7 +7,6 @@ using TMPro;
 
 namespace UniRxPracitce
 {
-
     public class Click2buttons : MonoBehaviour
     {
         [SerializeField] private Button btn1;
@@ -21,6 +20,5 @@ namespace UniRxPracitce
  
             btn1.OnClickAsObservable().Zip(btn2.OnClickAsObservable(),(b1,b2) => "Clicked!").First().Repeat().SubscribeToText(txt, input => txt.text + input + "\n");
         }
-
     }
 }
