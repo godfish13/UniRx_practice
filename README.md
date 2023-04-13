@@ -20,10 +20,12 @@
  -OnNext, OnError, OnCompleted 세가지의 사용방식 예시와 Dispose를 통한 스트림 종료 예시
  
  20230413_RotateCube  
- -SkipUntil, TakeUntil, Repeat을 활용하여 오브젝트를 드래그하여 회전시키기 구
+ -SkipUntil, TakeUntil, Repeat을 활용하여 오브젝트를 드래그하여 회전시키기 구현
  
- 
- 
+   
+   
+   
+   
  !!! start 혹은 awake에서 subscribe해야 하나의 스트림만 생성한다. if) update내에서 subscribe시, 프레임마다 스트림을 생성해버림
  
 .AsObservable()  <-이벤트를 스트림으로 변경(GUI의 button등이 Onclick()이벤트를 보내는 등 이벤트에 바로 연결 가능)
