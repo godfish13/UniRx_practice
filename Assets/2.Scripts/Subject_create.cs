@@ -9,7 +9,6 @@ public class Subject_create : MonoBehaviour
 
     WaitForSeconds ws = new WaitForSeconds(3f);
 
-    // Start is called before the first frame update
     void Start()
     {
         sub.Subscribe(_ => Debug.Log("sub1 : " + _));
