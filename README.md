@@ -20,7 +20,7 @@
  -OnNext, OnError, OnCompleted 세가지의 사용방식 예시와 Dispose를 통한 스트림 종료 예시
  
  20230413_RotateCube  
- -SkipUntil, TakeUntil, Repeat을 활용하여 오브젝트를 드래그하여 회전시키기 구현
+ -SkipUntil, TakeUntil, Repeat을 활용하여 오브젝트를 드래그하여 회전시키기 구현  
  
    
    
