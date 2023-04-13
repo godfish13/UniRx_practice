@@ -2,24 +2,24 @@
  
  Scripts
  
- Click2buttons
+ Click2buttons  
  -버튼 두개를 모두 누른경우 인식
  
- ClickVisulize
- -mode // 0 : change text if clicked, 1 : change text if clicked 3 times(use buffer), 2 : change text if clicked 3 times(use skip)
+ ClickVisulize  
+ -mode // 0 : change text if clicked, 1 : change text if clicked 3 times(use buffer), 2 : change text if clicked 3 times(use skip)  
  -모드에 따라 버튼 클릭 시 버튼 텍스트 변경
  
- In folder
- 20230402
+ In folder  
+ 20230402  
  -delegate event를 통한 Timer의 제작 vs UniRx를 통한 Timer의 제작
  
- 20230405
+ 20230405  
  -ReactiveProperty, UniRxTriggers, UniRx_Coroutine 세가지 방식으로 subject 만들기
  
- 20230407
+ 20230407  
  -OnNext, OnError, OnCompleted 세가지의 사용방식 예시와 Dispose를 통한 스트림 종료 예시
  
- 20230413_RotateCube
+ 20230413_RotateCube  
  -SkipUntil, TakeUntil, Repeat을 활용하여 오브젝트를 드래그하여 회전시키기 구
  
  
